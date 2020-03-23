@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:F1SeasonResults"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="5"
+                BorderThickness="1"
+                BorderBrush="Black">
+        </Border>
+        <StackPanel Grid.Column="2"
+                    Grid.ColumnSpan="1">
+            <TextBlock Text="Select a season:"
+                       FontSize="20"
+                       Margin="0, 0, 0, 10" />
+            <ComboBox Margin="0, 0, 0, 5">
 
+            </ComboBox>
+            <Button Content="Show results" />
+        </StackPanel>
+
+        <ListView Grid.Column="0"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="3"
+                  Grid.RowSpan="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Position" />
+                    <GridViewColumn Header="Name" />
+                    <GridViewColumn Header="Birthdate" />
+                    <GridViewColumn Header="Nationality" />
+                    <GridViewColumn Header="Wins" />
+                    <GridViewColumn Header="Points" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Grid.Column="3"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="2"
+                  Grid.RowSpan="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Position" />
+                    <GridViewColumn Header="Name" />
+                    <GridViewColumn Header="Nationality" />
+                    <GridViewColumn Header="Wins" />
+                    <GridViewColumn Header="Points" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

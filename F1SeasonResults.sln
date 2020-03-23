@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1SeasonResults", "F1SeasonResults\F1SeasonResults.csproj", "{F6C55981-795C-4B0F-92CA-423E220FD82A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1SeasonResults", "F1SeasonResults\F1SeasonResults.csproj", "{F6C55981-795C-4B0F-92CA-423E220FD82A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1SeasonResults.Entities", "F1SeasonResults.Entities\F1SeasonResults.Entities.csproj", "{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F6C55981-795C-4B0F-92CA-423E220FD82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C55981-795C-4B0F-92CA-423E220FD82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C55981-795C-4B0F-92CA-423E220FD82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
