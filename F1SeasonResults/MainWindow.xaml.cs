@@ -23,6 +23,20 @@ namespace F1SeasonResults
         public MainWindow()
         {
             InitializeComponent();
+            for(int i = 1950; i < 2020; i++)
+            {
+                comboBoxSelectYear.Items.Add(i);
+            }
+        }
+
+        private void buttonShowResults_Click(object sender, RoutedEventArgs e)
+        {
+            int.TryParse(comboBoxSelectYear.SelectedItem.ToString(), out int selectedYear);
+        }
+
+        private void comboBoxSelectYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            buttonShowResults.IsEnabled = true;
         }
     }
 }
