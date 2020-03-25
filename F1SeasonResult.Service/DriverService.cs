@@ -8,9 +8,10 @@ namespace F1SeasonResult.Service
 {
     public class DriverService
     {
-        public virtual List<Driver> GetDrivers(string url)
+        public virtual List<DriverStanding> GetDrivers(string url)
         {
-            List<Driver> drivers;
+            RootObject jsonObject;
+            List<DriverStanding> driverStandings = new List<DriverStanding>();
             string resultTask;
 
             using(WebClient client = new WebClient())
@@ -18,8 +19,12 @@ namespace F1SeasonResult.Service
                 resultTask = client.DownloadString(url);
             }
 
-            drivers = JsonConvert.DeserializeObject<List<Driver>>(resultTask);
-            return drivers;
+            jsonObject = JsonConvert.DeserializeObject<RootObject>(resultTask);
+            foreach(DriverStanding driverStanding in jsonObject.MRData.StandingsTable.StandingsLists[0].DriverStandings)
+            {
+                driverStandings.Add(driverStanding);
+            }
+            return driverStandings;
         }
     }
 }
