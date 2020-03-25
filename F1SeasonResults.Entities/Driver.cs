@@ -10,16 +10,10 @@ namespace F1SeasonResults.Entities
         protected string url;
         protected string givenName;
         protected string familyName;
-        protected DateTime dateOfBirth;
+        protected string dateOfBirth;
         protected string nationality;
-        protected List<Contructor> contructors;
-        protected int position;
-        protected string positionText;
-        protected int points;
-        protected int wins;
 
-        public Driver(string driverId, string url, string givenName, string familyName, DateTime dateOfBirth, string nationality, 
-            List<Contructor> contructors, int position, string positionText, int points, int wins)
+        public Driver(string driverId, string url, string givenName, string familyName, string dateOfBirth, string nationality)
         {
             DriverID = driverId;
             Url = url;
@@ -27,11 +21,6 @@ namespace F1SeasonResults.Entities
             FamilyName = familyName;
             DateOfBirth = dateOfBirth;
             Nationality = nationality;
-            Contructors = contructors;
-            Position = position;
-            PositionText = positionText;
-            Points = points;
-            Wins = wins;
         }
         public virtual string DriverID
         {
@@ -85,7 +74,7 @@ namespace F1SeasonResults.Entities
             }
         }
 
-        public virtual DateTime DateOfBirth
+        public virtual string DateOfBirth
         {
             get
             {
@@ -108,71 +97,6 @@ namespace F1SeasonResults.Entities
             set
             {
                 nationality = value;
-            }
-        }
-
-        public virtual List<Contructor> Contructors
-        {
-            get
-            {
-                return contructors;
-            }
-
-            set
-            {
-                contructors = value;
-            }
-        }
-
-        public virtual int Position
-        {
-            get
-            {
-                return position;
-            }
-
-            set
-            {
-                position = value;
-            }
-        }
-
-        public virtual string PositionText
-        {
-            get
-            {
-                return positionText;
-            }
-
-            set
-            {
-                positionText = value;
-            }
-        }
-
-        public virtual int Points
-        {
-            get
-            {
-                return points;
-            }
-
-            set
-            {
-                points = value;
-            }
-        }
-
-        public virtual int Wins
-        {
-            get
-            {
-                return wins;
-            }
-
-            set
-            {
-                wins = value;
             }
         }
     }
