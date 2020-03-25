@@ -1,7 +1,9 @@
-﻿using F1SeasonResult.Service;
+﻿
+using F1SeasonResult.Service;
 using F1SeasonResults.Entities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,6 +25,7 @@ namespace F1SeasonResults
     /// </summary>
     public partial class MainWindow: Window
     {
+        private ViewModel viewModel;
         public static DriverService driverService = new DriverService();
         public MainWindow()
         {
@@ -31,6 +34,7 @@ namespace F1SeasonResults
             {
                 comboBoxSelectYear.Items.Add(i);
             }
+            DataContext = viewModel;
         }
 
         private void buttonShowResults_Click(object sender, RoutedEventArgs e)
@@ -38,11 +42,14 @@ namespace F1SeasonResults
             string selectedYear = comboBoxSelectYear.SelectedItem.ToString();
             string url = @"http://ergast.com/api/f1/" + selectedYear + "/driverstandings.json";
             driverService.GetDrivers(url);
+            viewModel = new ViewModel();
+            DataContext = viewModel;
         }
 
         private void comboBoxSelectYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             buttonShowResults.IsEnabled = true;
         }
+        
     }
 }

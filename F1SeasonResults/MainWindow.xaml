@@ -44,18 +44,31 @@
                     Click="buttonShowResults_Click" />
         </StackPanel>
 
-        <ListView Grid.Column="0"
+        <ListView ItemsSource="{Binding Drivers}"
+                  Grid.Column="0"
                   Grid.Row="1"
                   Grid.ColumnSpan="3"
                   Grid.RowSpan="4">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Position" />
-                    <GridViewColumn Header="Name" />
-                    <GridViewColumn Header="Birthdate" />
-                    <GridViewColumn Header="Nationality" />
-                    <GridViewColumn Header="Wins" />
-                    <GridViewColumn Header="Points" />
+                    <GridViewColumn Header="Position" 
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Position}"/>
+                    <GridViewColumn Header="Name"
+                                    Width="160"
+                                    DisplayMemberBinding="{Binding Driver.FullName}"/>
+                    <GridViewColumn Header="Birthdate"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding Driver.DateOfBirth}"/>
+                    <GridViewColumn Header="Nationality"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding Driver.Nationality}" />
+                    <GridViewColumn Header="Wins"
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Wins}" />
+                    <GridViewColumn Header="Points"
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Points}" />
                 </GridView>
             </ListView.View>
         </ListView>

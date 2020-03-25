@@ -10,6 +10,7 @@ namespace F1SeasonResults.Entities
         protected string url;
         protected string givenName;
         protected string familyName;
+        protected string fullName;
         protected string dateOfBirth;
         protected string nationality;
 
@@ -73,6 +74,17 @@ namespace F1SeasonResults.Entities
                 familyName = value;
             }
         }
+        public virtual string FullName
+        {
+            get
+            {
+                return fullName = GivenName + " "  + FamilyName;
+            }
+            set
+            {
+                fullName = value;
+            }
+        }
 
         public virtual string DateOfBirth
         {
@@ -86,6 +98,7 @@ namespace F1SeasonResults.Entities
                 dateOfBirth = value;
             }
         }
+       
 
         public virtual string Nationality
         {
