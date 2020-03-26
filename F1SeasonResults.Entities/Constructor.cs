@@ -70,5 +70,10 @@ namespace F1SeasonResults.Entities
                 nationality = value;
             }
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
