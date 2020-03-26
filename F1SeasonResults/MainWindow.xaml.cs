@@ -27,6 +27,7 @@ namespace F1SeasonResults
     {
         private ViewModel viewModel;
         public static DriverService driverService = new DriverService();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -40,8 +41,10 @@ namespace F1SeasonResults
         private void buttonShowResults_Click(object sender, RoutedEventArgs e)
         {
             string selectedYear = comboBoxSelectYear.SelectedItem.ToString();
-            string url = @"http://ergast.com/api/f1/" + selectedYear + "/driverstandings.json";
-            driverService.GetDrivers(url);
+            string urlDrivers = @"http://ergast.com/api/f1/" + selectedYear + "/driverstandings.json";
+            string urlConstructors = @"http://ergast.com/api/f1/" + selectedYear + "/constructorstandings.json";
+            driverService.GetDrivers(urlDrivers);
+            driverService.GetConstructors(urlConstructors);
             viewModel = new ViewModel();
             DataContext = viewModel;
         }
@@ -49,7 +52,6 @@ namespace F1SeasonResults
         private void comboBoxSelectYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             buttonShowResults.IsEnabled = true;
-        }
-        
+        }      
     }
 }

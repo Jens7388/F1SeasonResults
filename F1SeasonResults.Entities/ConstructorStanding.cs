@@ -4,23 +4,21 @@ using System.Text;
 
 namespace F1SeasonResults.Entities
 {
-    public class DriverStanding
+    public class ConstructorStanding
     {
         protected string position;
         protected string positionText;
         protected string points;
         protected string wins;
-        protected Driver driver;
-        protected List<Constructor> constructors;
+        protected Constructor constructor;
 
-        public DriverStanding(string position, string positionText, string points, string wins, Driver driver, List<Constructor> constructors)
+        public ConstructorStanding(string position, string positionText, string points, string wins, Constructor constructor)
         {
             Position = position;
             PositionText = positionText;
             Points = points;
             Wins = wins;
-            Driver = driver;
-            Constructors = constructors;
+            Constructor = constructor;
         }
 
         public virtual string Position
@@ -75,29 +73,16 @@ namespace F1SeasonResults.Entities
             }
         }
 
-        public virtual Driver Driver
+        public virtual Constructor Constructor
         {
             get
             {
-                return driver;
+                return constructor;
             }
 
             set
             {
-                driver = value;
-            }
-        }
-
-        public virtual List<Constructor> Constructors
-        {
-            get
-            {
-                return constructors;
-            }
-
-            set
-            {
-                constructors = value;
+                constructor = value;
             }
         }
     }

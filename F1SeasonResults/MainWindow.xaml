@@ -84,15 +84,26 @@
         </ListView>
         <ListView Grid.Column="3"
                   Grid.Row="1"
+                  ItemsSource="{Binding Constructors}"
                   Grid.ColumnSpan="2"
                   Grid.RowSpan="4">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Position" />
-                    <GridViewColumn Header="Name" />
-                    <GridViewColumn Header="Nationality" />
-                    <GridViewColumn Header="Wins" />
-                    <GridViewColumn Header="Points" />
+                    <GridViewColumn Header="Position"
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Position}"/>
+                    <GridViewColumn Header="Name"
+                                    Width="120"
+                                    DisplayMemberBinding="{Binding Constructor.Name}"/>
+                    <GridViewColumn Header="Nationality"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding Constructor.Nationality}"/>
+                    <GridViewColumn Header="Wins"
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Wins}"/>
+                    <GridViewColumn Header="Points"
+                                    Width="80"
+                                    DisplayMemberBinding="{Binding Points}"/>
                 </GridView>
             </ListView.View>
         </ListView>

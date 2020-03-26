@@ -9,12 +9,14 @@ namespace F1SeasonResults.Entities
         protected string season;
         protected string round;
         protected List<DriverStanding> driverStandings;
+        protected List<ConstructorStanding> constructorStandings;
 
-        public StandingsList(string season, string round, List<DriverStanding> driverStandings)
+        public StandingsList(string season, string round, List<DriverStanding> driverStandings, List<ConstructorStanding> constructorStandings)
         {
             Season = season;
             Round = round;
             DriverStandings = driverStandings;
+            ConstructorStandings = constructorStandings;
         }
 
         public virtual string Season
@@ -53,6 +55,19 @@ namespace F1SeasonResults.Entities
             set
             {
                 driverStandings = value;
+            }
+        }
+
+        public virtual List<ConstructorStanding> ConstructorStandings
+        {
+            get
+            {
+                return constructorStandings;
+            }
+
+            set
+            {
+                constructorStandings = value;
             }
         }
     }
