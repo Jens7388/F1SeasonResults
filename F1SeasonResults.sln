@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1SeasonResults", "F1Season
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1SeasonResults.Entities", "F1SeasonResults.Entities\F1SeasonResults.Entities.csproj", "{9E98CA47-FA0E-443D-A47D-EC5E5009DB78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1SeasonResult.Service", "F1SeasonResult.Service\F1SeasonResult.Service.csproj", "{3680BEAA-C8F0-4EE0-8AFC-56D2EA494460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F1SeasonResult.Service", "F1SeasonResult.Service\F1SeasonResult.Service.csproj", "{3680BEAA-C8F0-4EE0-8AFC-56D2EA494460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{317C04C0-8824-4F7E-A2FD-8838DB9A6C91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3680BEAA-C8F0-4EE0-8AFC-56D2EA494460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3680BEAA-C8F0-4EE0-8AFC-56D2EA494460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3680BEAA-C8F0-4EE0-8AFC-56D2EA494460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317C04C0-8824-4F7E-A2FD-8838DB9A6C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317C04C0-8824-4F7E-A2FD-8838DB9A6C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317C04C0-8824-4F7E-A2FD-8838DB9A6C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317C04C0-8824-4F7E-A2FD-8838DB9A6C91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
