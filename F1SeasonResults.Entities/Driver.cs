@@ -23,6 +23,7 @@ namespace F1SeasonResults.Entities
             DateOfBirth = dateOfBirth;
             Nationality = nationality;
         }
+
         public virtual string DriverID
         {
             get
@@ -74,11 +75,12 @@ namespace F1SeasonResults.Entities
                 familyName = value;
             }
         }
+
         public virtual string FullName
         {
             get
             {
-                return fullName = GivenName + " "  + FamilyName;
+                return fullName = GivenName + " " + FamilyName;
             }
             set
             {
@@ -98,7 +100,6 @@ namespace F1SeasonResults.Entities
                 dateOfBirth = value;
             }
         }
-       
 
         public virtual string Nationality
         {

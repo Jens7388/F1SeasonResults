@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:F1SeasonResults"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="450"
-        Width="800">
+        Height="600"
+        Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -29,6 +29,16 @@
                 BorderThickness="1"
                 BorderBrush="Black">
         </Border>
+        <TextBlock Text="Driver standings"
+                   FontSize="20"
+                   TextWrapping="Wrap"
+                   Margin="60,71,31,7"
+                   Grid.Column="1" />
+        <TextBlock Text="Constructor standings"
+                   FontSize="20"
+                   TextWrapping="Wrap"
+                   Margin="23,71,1,8"
+                   Grid.Column="3" />
         <StackPanel Grid.Column="2"
                     Grid.ColumnSpan="1">
             <TextBlock Text="Select a season:"
@@ -37,14 +47,12 @@
             <ComboBox x:Name="comboBoxSelectYear"
                       Margin="0, 0, 0, 5"
                       SelectionChanged="comboBoxSelectYear_SelectionChanged">
-
             </ComboBox>
             <Button x:Name="buttonShowResults"
                     Content="Show results"
                     IsEnabled="False"
                     Click="buttonShowResults_Click" />
         </StackPanel>
-
         <ListView ItemsSource="{Binding Drivers}"
                   Grid.Column="0"
                   Grid.Row="1"
@@ -91,19 +99,19 @@
                 <GridView>
                     <GridViewColumn Header="Position"
                                     Width="80"
-                                    DisplayMemberBinding="{Binding Position}"/>
+                                    DisplayMemberBinding="{Binding Position}" />
                     <GridViewColumn Header="Name"
                                     Width="120"
-                                    DisplayMemberBinding="{Binding Constructor.Name}"/>
+                                    DisplayMemberBinding="{Binding Constructor.Name}" />
                     <GridViewColumn Header="Nationality"
                                     Width="100"
-                                    DisplayMemberBinding="{Binding Constructor.Nationality}"/>
+                                    DisplayMemberBinding="{Binding Constructor.Nationality}" />
                     <GridViewColumn Header="Wins"
                                     Width="80"
-                                    DisplayMemberBinding="{Binding Wins}"/>
+                                    DisplayMemberBinding="{Binding Wins}" />
                     <GridViewColumn Header="Points"
                                     Width="80"
-                                    DisplayMemberBinding="{Binding Points}"/>
+                                    DisplayMemberBinding="{Binding Points}" />
                 </GridView>
             </ListView.View>
         </ListView>
