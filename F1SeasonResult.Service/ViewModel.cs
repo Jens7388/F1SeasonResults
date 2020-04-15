@@ -1,8 +1,6 @@
 ﻿using F1SeasonResults.Entities;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 
 namespace F1SeasonResult.Service
 {

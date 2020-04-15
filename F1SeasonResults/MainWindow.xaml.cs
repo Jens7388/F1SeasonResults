@@ -1,22 +1,6 @@
-﻿
-using F1SeasonResult.Service;
-using F1SeasonResults.Entities;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using F1SeasonResult.Service;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace F1SeasonResults
 {
@@ -35,16 +19,20 @@ namespace F1SeasonResults
             {
                 comboBoxSelectYear.Items.Add(i);
             }
-            DataContext = viewModel;
         }
 
         private void buttonShowResults_Click(object sender, RoutedEventArgs e)
         {
-            string selectedYear = comboBoxSelectYear.SelectedItem.ToString();
-            string urlDrivers = @"http://ergast.com/api/f1/" + selectedYear + "/driverstandings.json";
-            string urlConstructors = @"http://ergast.com/api/f1/" + selectedYear + "/constructorstandings.json";
+            string selectedYearString = comboBoxSelectYear.SelectedItem.ToString();
+            int.TryParse(selectedYearString, out int selectedYear);
+            if(selectedYear < 1958)
+            {
+                MessageBox.Show("Note: There was no constructors championship until 1958, so no constructors will be shown!");
+            }
+            string urlDrivers = @"http://ergast.com/api/f1/" + selectedYearString + "/driverstandings.json";
+            string urlConstructors = @"http://ergast.com/api/f1/" + selectedYearString + "/constructorstandings.json";
             driverService.GetDrivers(urlDrivers);
-            driverService.GetConstructors(urlConstructors);
+            driverService.GetConstructors(urlConstructors);         
             viewModel = new ViewModel();
             DataContext = viewModel;
         }
