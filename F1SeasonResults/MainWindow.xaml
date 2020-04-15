@@ -44,14 +44,14 @@
             <TextBlock Text="Select a season:"
                        FontSize="20"
                        Margin="0, 0, 0, 10" />
-            <ComboBox x:Name="comboBoxSelectYear"
+            <ComboBox x:Name="ComboBoxSelectYear"
                       Margin="0, 0, 0, 5"
-                      SelectionChanged="comboBoxSelectYear_SelectionChanged">
+                      SelectionChanged="ComboBoxSelectYear_SelectionChanged">
             </ComboBox>
-            <Button x:Name="buttonShowResults"
+            <Button x:Name="ButtonShowResults"
                     Content="Show results"
                     IsEnabled="False"
-                    Click="buttonShowResults_Click" />
+                    Click="ButtonShowResults_Click" />
         </StackPanel>
         <ListView ItemsSource="{Binding Drivers}"
                   Grid.Column="0"

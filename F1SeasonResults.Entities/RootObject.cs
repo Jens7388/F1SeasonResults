@@ -9,6 +9,7 @@ namespace F1SeasonResults.Entities
         {
             MRData = mRData;
         }
+
         public virtual MRData MRData
         {
             get

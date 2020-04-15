@@ -14,6 +14,7 @@ namespace F1SeasonResult.Service
             List<DriverStanding> drivers = driverService.GetAllDrivers();
             List<ConstructorStanding> constructors = driverService.GetAllConstructors();
             Drivers = new ObservableCollection<DriverStanding>(drivers);
+
             if(constructors != null)
             {
                 Constructors = new ObservableCollection<ConstructorStanding>(constructors);

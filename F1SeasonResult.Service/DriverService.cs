@@ -53,10 +53,12 @@ namespace F1SeasonResult.Service
                 return null;
             }
         }
+
         public virtual List<DriverStanding> GetAllDrivers()
         {
             return driverStandings;
         }
+
         public virtual List<ConstructorStanding> GetAllConstructors()
         {
             return constructorStandings;

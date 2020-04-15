@@ -8,14 +8,12 @@ namespace Tests
         [Fact]
         public void TestMethods()
         {
-            ViewModel viewModel;
             DriverService driverService = new DriverService();
             string selectedYearString = "1950";
             string urlDrivers = @"http://ergast.com/api/f1/" + selectedYearString + "/driverstandings.json";
             string urlConstructors = @"http://ergast.com/api/f1/" + selectedYearString + "/constructorstandings.json";
             driverService.GetDrivers(urlDrivers);
             driverService.GetConstructors(urlConstructors);
-            viewModel = new ViewModel();
         }
 
         [Fact]
